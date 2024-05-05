@@ -17,8 +17,6 @@ private const val START_TIME = 29
  * !주의 29분 이후에 실행시키지 말것!
  */
 
-var first = true
-
 @Component
 class ScheduledTask(
     private val postProvider: PostProvider,

@@ -10,9 +10,9 @@ spring:
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    url: jdbc:mysql://macro-db.cd6gc4wm6h7v.ap-northeast-2.rds.amazonaws.com:3306/thunder?serverTimezone=UTC
+    username: admin
+    password: secret1!
 
   config:
     import:
