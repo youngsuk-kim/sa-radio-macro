@@ -1,0 +1,32 @@
+version: "3.8"
+
+services:
+  app11:
+    image: breadsuk/samacro:lla
+    container_name: app11
+    ports:
+      - "8081:8080"
+
+  app22:
+    image: breadsuk/samacro:lla
+    container_name: app22
+    ports:
+      - "8083:8080"
+
+  app33:
+    image: breadsuk/samacro:lla
+    container_name: app33
+    ports:
+      - "8084:8080"
+
+  app44:
+    image: breadsuk/samacro:lla
+    container_name: app44
+    ports:
+      - "8085:8080"
+
+  app55:
+    image: breadsuk/samacro:lla
+    container_name: app55
+    ports:
+      - "8086:8080"

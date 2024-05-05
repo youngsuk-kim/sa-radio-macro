@@ -1,0 +1,39 @@
+server:
+  port: 8081 # 클라이언트 서버 포트
+
+spring:
+  config:
+    import: classpath:/client.yml
+    activate:
+      on-profile: test
+  mvc:
+    async:
+      request-timeout: 999999
+
+---
+server:
+  port: 8080
+
+public:
+  ip: ${PUBLIC_IP}
+
+spring:
+  application:
+    name: thunder-macro-worker
+  config:
+    import: classpath:/client.yml
+
+    activate:
+      on-profile: live
+  mvc:
+    async:
+      request-timeout: 9999999999
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
